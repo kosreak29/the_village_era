@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Village Era Cafe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- 1. Animated Preloader -->
+    <div id="preloader">
+        <div class="loader-cup">☕</div>
+        <h2 class="glitch" data-text="Brewing Vibe...">Brewing Vibe...</h2>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+
+    <a href="#menu" class="floating-offer">🔥 Claim 10% Off Today!</a>
+
+    <!-- Header / Hero Section -->
+    <header class="hero">
+        <nav class="glass-nav">
+            <div class="logo">The Village Era.</div>
+            <ul class="nav-links">
+                <li><a href="#mood">Cravings</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#gallery">Vibe</a></li>
+                <li><a href="#visit">Visit Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero-content hidden-scroll">
+            <h1 class="glitch" data-text="Bite Into The Vibe.">Bite Into The Vibe.</h1>
+            <p>Not just a cafe. It's your escape in Durg.</p>
+            <a href="#mood" class="btn-neon">Satisfy Your Craving</a>
+        </div>
+
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+    </header>
+
+    <!-- Mood Matcher -->
+    <section id="mood" class="mood-section hidden-scroll">
+        <h2>What are you craving right now?</h2>
+        <div class="mood-buttons">
+            <button class="mood-btn" onclick="suggestDish('spicy')">🌶️ Something Spicy</button>
+            <button class="mood-btn" onclick="suggestDish('cheesy')">🧀 Extra Cheesy</button>
+            <button class="mood-btn" onclick="suggestDish('relax')">☕ Just Relaxing</button>
+        </div>
+        <div id="suggestion-box" class="glass-card hidden">
+            <!-- JS will inject content here -->
+        </div>
+    </section>
+
+    <!-- Menu Section (with Images & WhatsApp) -->
+    <section id="menu" class="premium-menu hidden-scroll">
+        <h2>Signature Drops</h2>
+        <div class="menu-container">
+
+            <!-- Item 1: Chilli Paneer -->
+            <div class="glass-card menu-item">
+                <div class="glow-orb"></div>
+                <img src="image/chilli_paneer_studio_food_photo.webp" alt="Chilli Paneer" class="menu-img">
+                <h3>The Era's Chilli Paneer</h3>
+                <p>A sizzling mix of soft paneer cubes, crunchy veggies, and our signature spicy soy sauce.</p>
+                <div class="price-container">
+                    <span class="original-price">₹93</span>
+                    <span class="price">₹85</span>
+                    <span class="discount-badge">10% OFF</span>
+                </div>
+                <a href="https://wa.me/916269489237?text=Hi,%20I%20want%20to%20order%20Chilli%20Paneer" target="_blank"
+                    class="btn-wa">Order on WhatsApp 💬</a>
+            </div>
+
+            <!-- Item 2: Chocolate Toast -->
+            <!-- <div class="glass-card menu-item">
+                <div class="glow-orb"></div>
+                <img src="image/chocolate_toast_professional.webp" alt="Chocolate Toast" class="menu-img">
+                <h3>The Era's Chocolate Toast</h3>
+                <p>Crispy toasted bread smothered in rich, melted chocolate. Your ultimate sweet craving, sorted!.</p>
+                <div class="price-container">
+                    <span class="original-price">₹132</span>
+                    <span class="price">₹120</span>
+                    <span class="discount-badge">10% OFF</span>
+                </div>
+                <a href="https://wa.me/916269489237?text=Hi,%20I%20want%20to%20order%20Chocolate%20Toast"
+                    target="_blank" class="btn-wa">Order on WhatsApp 💬</a>
+            </div> -->
+
+            <!-- Item 3: Veg Chowmein -->
+            <div class="glass-card menu-item">
+                <div class="glow-orb"></div>
+                <img src="image/chowmein_website_food_photo.webp" alt="Veg Chowmein" class="menu-img">
+                <h3>The Era's Veg Chowmein</h3>
+                <p>Earthy flavors brewed to absolute perfection in a traditional clay cup.</p>
+                <div class="price-container">
+                    <span class="original-price">₹67</span>
+                    <span class="price">₹60</span>
+                    <span class="discount-badge">10% OFF</span>
+                </div>
+                <a href="https://wa.me/916269489237?text=Hi,%20I%20want%20to%20order%20Veg%20Chowmein" target="_blank"
+                    class="btn-wa">Order on WhatsApp 💬</a>
+            </div>
+
+            <!-- Item 4: Creamy Alfredo Pasta -->
+            <div class="glass-card menu-item">
+                <div class="glow-orb"></div>
+                <img src="image/creamy_alfredo_pasta_professional.webp" alt="Creamy Alfredo Pasta" class="menu-img">
+                <h3>The Era's Creamy Alfredo Pasta</h3>
+                <p>Rich, velvety, and generously loaded with cheese. Every bite is a creamy Italian delight.</p>
+                <div class="price-container">
+                    <span class="original-price">₹93</span>
+                    <span class="price">₹85</span>
+                    <span class="discount-badge">10% OFF</span>
+                </div>
+                <a href="https://wa.me/916269489237?text=Hi,%20I%20want%20to%20order%20Creamy%20Alfredo%20Pasta"
+                    target="_blank" class="btn-wa">Order on WhatsApp 💬</a>
+            </div>
+
+            <!-- Item 5: Crispy Spiced Chickpeas -->
+            <div class="glass-card menu-item">
+                <div class="glow-orb"></div>
+                <img src="image/Crispy Spiced Chickpea.webp" alt="Crispy Spiced Chickpeas" class="menu-img">
+                <h3>The Era's Crispy Spiced Chickpeas</h3>
+                <p>Crunchy, chatpata, and totally addictive. The perfect light snack to munch on with your friends.</p>
+                <div class="price-container">
+                    <span class="original-price">₹80</span>
+                    <span class="price">₹72</span>
+                    <span class="discount-badge">10% OFF</span>
+                </div>
+                <a href="https://wa.me/916269489237?text=Hi,%20I%20want%20to%20order%20Crispy%20Spiced%20Chickpeas"
+                    target="_blank" class="btn-wa">Order on WhatsApp 💬</a>
+            </div>
+
+            <!-- Item 6: Grilled Wrap -->
+            <div class="glass-card menu-item">
+                <div class="glow-orb"></div>
+                <img src="image/grilled_wrap_professional.webp" alt="Grilled Wrap" class="menu-img">
+                <h3>The Era's Grilled Wrap</h3>
+                <p>Toasted to perfection and stuffed with fresh, flavorful fillings. A wholesome and delicious bite.</p>
+                <div class="price-container">
+                    <span class="original-price">₹38</span>
+                    <span class="price">₹34</span>
+                    <span class="discount-badge">10% OFF</span>
+                </div>
+                <a href="https://wa.me/916269489237?text=Hi,%20I%20want%20to%20order%20Grilled%20Wrap" target="_blank"
+                    class="btn-wa">Order on WhatsApp 💬</a>
+            </div>
+
+            <!-- Item 7: Hakka Noodles -->
+            <div class="glass-card menu-item">
+                <div class="glow-orb"></div>
+                <img src="image/hakka_noodles_professional.webp" alt="Hakka Noodles" class="menu-img">
+                <h3>The Era's Hakka Noodles</h3>
+                <p>Authentic wok-tossed noodles with a mild, savory flavor and perfectly stir-fried veggies.</p>
+                <div class="price-container">
+                    <span class="original-price">₹70</span>
+                    <span class="price">₹63</span>
+                    <span class="discount-badge">10% OFF</span>
+                </div>
+                <a href="https://wa.me/916269489237?text=Hi,%20I%20want%20to%20order%20Hakka%20Noodles" target="_blank"
+                    class="btn-wa">Order on WhatsApp 💬</a>
+            </div>
+
+            <!-- Item 8: Loaded Fries -->
+            <div class="glass-card menu-item">
+                <div class="glow-orb"></div>
+                <img src="image/loaded_fries_edited.webp" alt="Loaded Fries" class="menu-img">
+                <h3>The Era's Loaded Fries</h3>
+                <p>Golden crispy fries drowned in gooey cheese and topped with mouth-watering spicy sauces. Pure
+                    indulgence!</p>
+                <div class="price-container">
+                    <span class="original-price">₹75</span>
+                    <span class="price">₹68</span>
+                    <span class="discount-badge">10% OFF</span>
+                </div>
+                <a href="https://wa.me/916269489237?text=Hi,%20I%20want%20to%20order%20Loaded%20Fries" target="_blank"
+                    class="btn-wa">Order on WhatsApp 💬</a>
+            </div>
+
+            <!-- Item 9: Masala Noodles -->
+            <div class="glass-card menu-item">
+                <div class="glow-orb"></div>
+                <img src="image/masala_noodles_professional.webp" alt="Masala Noodles" class="menu-img">
+                <h3>The Era's Masala Noodles</h3>
+                <p>Your ultimate comfort food, upgraded with an extra punch of desi spices and our magic masala.</p>
+                <div class="price-container">
+                    <span class="original-price">₹67</span>
+                    <span class="price">₹60</span>
+                    <span class="discount-badge">10% OFF</span>
+                </div>
+                <a href="https://wa.me/916269489237?text=Hi,%20I%20want%20to%20order%20Masala%20Noodles" target="_blank"
+                    class="btn-wa">Order on WhatsApp 💬</a>
+            </div>
+
+            <!-- Item 10: Classic Veg Pizza -->
+            <div class="glass-card menu-item">
+                <div class="glow-orb"></div>
+                <img src="image/pizza_menu_edited.webp" alt="Classic Veg Pizza" class="menu-img">
+                <h3>The Era's Classic Veg Pizza</h3>
+                <p>Your ultimate comfort food, upgraded with an extra punch of desi spices and our magic masala.</p>
+                <div class="price-container">
+                    <span class="original-price">₹120</span>
+                    <span class="price">₹100</span>
+                    <span class="discount-badge">10% OFF</span>
+                </div>
+                <a href="https://wa.me/916269489237?text=Hi,%20I%20want%20to%20order%20Classic%20Veg%20Pizza"
+                    target="_blank" class="btn-wa">Order on WhatsApp 💬</a>
+            </div>
+
+            <!-- Item 11: Supreme Veggie Pizza -->
+            <div class="glass-card menu-item">
+                <div class="glow-orb"></div>
+                <img src="image/pizza_professional_website.webp" alt="Supreme Veggie Pizza" class="menu-img">
+                <h3>The Era's Supreme Veggie Pizza</h3>
+                <p>Fully loaded with exotic veggies, a heavy layer of cheese, and our secret Italian seasoning.</p>
+                <div class="price-container">
+                    <span class="original-price">₹132</span>
+                    <span class="price">₹110</span>
+                    <span class="discount-badge">10% OFF</span>
+                </div>
+                <a href="https://wa.me/916269489237?text=Hi,%20I%20want%20to%20order%20Supreme%20Veggie%20Pizza"
+                    target="_blank" class="btn-wa">Order on WhatsApp 💬</a>
+            </div>
+
+            <!-- Item 12: Seasoned French Fries -->
+            <div class="glass-card menu-item">
+                <div class="glow-orb"></div>
+                <img src="image/seasoned_fries_professional.webp" alt="Seasoned French Fries" class="menu-img">
+                <h3>The Era's Seasoned French Fries</h3>
+                <p>Crispy on the outside, fluffy inside, and tossed in our special signature spice mix.</p>
+                <div class="price-container">
+                    <span class="original-price">₹67</span>
+                    <span class="price">₹60</span>
+                    <span class="discount-badge">10% OFF</span>
+                </div>
+                <a href="https://wa.me/916269489237?text=Hi,%20I%20want%20to%20order%20Seasoned%20French%20Fries"
+                    target="_blank" class="btn-wa">Order on WhatsApp 💬</a>
+            </div>
+
+            <!-- Item 13: Spicy Sweet Corn -->
+            <div class="glass-card menu-item">
+                <div class="glow-orb"></div>
+                <img src="image/spicy_corn_professional_food_photo.webp" alt="Spicy Sweet Corn" class="menu-img">
+                <h3>The Era's Spicy Sweet Corn</h3>
+                <p>A zesty, buttery mix of sweet corn kernels tossed with lemon and fiery spices.</p>
+                <div class="price-container">
+                    <span class="original-price">₹22</span>
+                    <span class="price">₹20</span>
+                    <span class="discount-badge">10% OFF</span>
+                </div>
+                <a href="https://wa.me/916269489237?text=Hi,%20I%20want%20to%20order%20Spicy%20Sweet%20Corn"
+                    target="_blank" class="btn-wa">Order on WhatsApp 💬</a>
+            </div>
+        </div>
+    </section>
+    <!-- Feature 5: Today's Special Combo -->
+    <section id="combo" class="combo-section hidden-scroll">
+        <h2>Today's Special Combo 🔥</h2>
+        <div class="glass-card combo-card">
+            <h3>Classic Veg Pizza + Seasoned Fries + 2 Kulhad Chai</h3>
+            <p>Perfect for two! Grab this ultimate combo for a perfect evening.</p>
+            <div class="price-container justify-center">
+                <span class="original-price">₹350</span>
+                <span class="price">₹280</span>
+                <span class="discount-badge">20% OFF</span>
+            </div>
+            <a href="https://wa.me/916269489237?text=Hi,%20I%20want%20to%20order%20Today's%20Special%20Combo"
+                target="_blank" class="btn-wa">Order Combo on WhatsApp 💬</a>
+        </div>
+    </section>
+
+    <!-- Feature 4: Wall of Love (Customer Reviews) -->
+    <section id="reviews" class="reviews-section hidden-scroll">
+        <h2>Wall of Love ❤️</h2>
+        <div class="reviews-container">
+            <div class="glass-card review-card">
+                <p class="stars">⭐⭐⭐⭐⭐</p>
+                <p>"Pocket friendly with Great taste must recommended"</p>
+                <h4>- Prateek Sahu</h4>
+            </div>
+            <div class="glass-card review-card">
+                <p class="stars">⭐⭐⭐⭐⭐</p>
+                <p>"Had a wonderful evening here with my nephew and niece! The atmosphere is very warm and
+                    family-friendly. We ordered some snacks and everything tasted amazing. Quick service and courteous
+                    staff. Definitely visiting again!"</p>
+                <h4>- Kaushal kumar</h4>
+            </div>
+            <div class="glass-card review-card">
+                <p class="stars">⭐⭐⭐⭐⭐</p>
+                <p>"The coffee ☕🤤 …"</p>
+                <h4>- rose rezu</h4>
+            </div>
+        </div>
+    </section>
+    <!-- 3. Vibe & Gallery Section -->
+    <section id="gallery" class="gallery-section hidden-scroll">
+        <h2>The Era Vibe</h2>
+        <div class="gallery-grid">
+
+            <div class="glass-card img-box"><img src="image/cafe_gallery_2.webp" alt="cafe_gallery_2"></div>
+            <div class="glass-card img-box"><img src="image/cafe_gallery_1.webp" alt="cafe_gallery_1"></div>
+            <div class="glass-card img-box"><img src="image/cafe_gallery_3.webp" alt="cafe_gallery_3"></div>
+        </div>
+    </section>
+
+    <!-- Naya Instagram Section -->
+    <div class="social-links">
+        <a href="https://instagram.com/the_village_era01" target="_blank" class="insta-link">
+            📸 Follow us on Instagram: @the_village_era01
+        </a>
+    </div>
+
+    <!-- Feature 2: Exact Google Maps Embed for The Village Era -->
+    <div class="map-container" style="padding: 0 5%; margin-bottom: 50px;">
+        <h3 style="text-align: center; color: #3A2318; margin-bottom: 20px;">Find Us Here 📍</h3>
+        <iframe
+            src="https://maps.google.com/maps?q=The+Village+Era,+Anjora,+Chhattisgarh+491001&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            width="100%" height="300" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Feature 3: Background Cafe Music -->
+    <audio id="cafe-music" loop>
+        <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3" type="audio/mpeg">
+    </audio>
+    <button id="music-btn" class="floating-music">🎵 Play Vibe</button>
+    <!-- Footer with Owner & FSSAI Details -->
+    <!-- Footer Section - Modern 3-Column Layout -->
+    <footer id="visit" class="modern-footer hidden-scroll">
+        <div class="footer-container">
+
+            <!-- Column 1: Address & Contact -->
+            <div class="footer-col">
+                <h3>Drop By. 📍</h3>
+                <p>Anjora, Durg, Chhattisgarh</p>
+                <p><strong>Open:</strong> Mon-Sun | 1 PM - 10:30 PM</p>
+                <p><a href="tel:+916269489237" class="phone-link">📞 +91 6269489237</a></p>
+                <p class="tagline">Made for late evening conversations.</p>
+            </div>
+
+            <!-- Column 2: Quick Links & Socials -->
+            <div class="footer-col">
+                <h3>Explore 🌐</h3>
+                <ul class="quick-links">
+                    <li><a href="#mood">Cravings</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#gallery">Vibe</a></li>
+                </ul>
+                <div class="social-icons">
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/916269489237" target="_blank" class="social-btn wa">💬</a>
+                    <!-- Instagram -->
+                    <a href="https://instagram.com/the_village_era01" target="_blank" class="social-btn ig">📸</a>
+                    <!-- Facebook (Agar hai toh link daalein, warna # rehne dein) -->
+                    <a href="#" target="_blank" class="social-btn fb">📘</a>
+                </div>
+            </div>
+
+            <!-- Column 3: Trust & Legal -->
+            <div class="footer-col">
+                <h3>Trust & Info 📋</h3>
+                <p><strong>Owner:</strong> Rohan Deshmukh</p>
+                <p><strong>FSSAI License No:</strong></p>
+                <p class="fssai-number">12345678901234</p>
+            </div>
+
+        </div>
+
+        <!-- Copyright & Local Touch -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 The Village Era. All rights reserved.</p>
+            <p class="local-love">Made with ❤️ in Durg</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
